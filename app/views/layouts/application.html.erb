@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlueReview</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <%= image_tag("icon-logo-header.png", {height: "23"}) %>
+        Orange Review
+      </div>
+      <nav>
+        <a href="#">Topics</a>
+        <a href="#">Tags</a>
+        <%= image_tag("icon-search-header.png", {class: "head-magnify-orange", height: "14"}) %>
+      </nav>
+    </header>
+    <%= yield %>
+    <footer>
+      <div>
+        <%= image_tag("icon-logo-header.png", {class: "head-logo", height: "23"}) %>
+        Orange Review
+      </div>
+      <p class="footer-tagline">
+        The Best Travel Tips
+      </p>
+      <h6 class="copyright">
+        Copyright 2018, Build Carolina.
+      </h6>
+    </footer>
+  </body>
+</html>
